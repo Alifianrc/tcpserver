@@ -10,7 +10,7 @@ to your .txt file
 
 3. Run server first then multiple clients
 ## Result
-https://github.com/marvel-natanael/tcpserver/blob/main/Image%201.png
+![alt text](https://github.com/marvel-natanael/tcpserver/blob/main/Image%201.png?raw=true)
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
