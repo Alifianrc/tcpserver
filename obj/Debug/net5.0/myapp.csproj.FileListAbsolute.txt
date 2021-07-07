@@ -1,0 +1,16 @@
+C:\Users\natan\tea\myapp\bin\Debug\net5.0\myapp.exe
+C:\Users\natan\tea\myapp\bin\Debug\net5.0\myapp.deps.json
+C:\Users\natan\tea\myapp\bin\Debug\net5.0\myapp.runtimeconfig.json
+C:\Users\natan\tea\myapp\bin\Debug\net5.0\myapp.runtimeconfig.dev.json
+C:\Users\natan\tea\myapp\bin\Debug\net5.0\myapp.dll
+C:\Users\natan\tea\myapp\bin\Debug\net5.0\ref\myapp.dll
+C:\Users\natan\tea\myapp\bin\Debug\net5.0\myapp.pdb
+C:\Users\natan\tea\myapp\obj\Debug\net5.0\myapp.csproj.AssemblyReference.cache
+C:\Users\natan\tea\myapp\obj\Debug\net5.0\myapp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\natan\tea\myapp\obj\Debug\net5.0\myapp.AssemblyInfoInputs.cache
+C:\Users\natan\tea\myapp\obj\Debug\net5.0\myapp.AssemblyInfo.cs
+C:\Users\natan\tea\myapp\obj\Debug\net5.0\myapp.csproj.CoreCompileInputs.cache
+C:\Users\natan\tea\myapp\obj\Debug\net5.0\myapp.dll
+C:\Users\natan\tea\myapp\obj\Debug\net5.0\ref\myapp.dll
+C:\Users\natan\tea\myapp\obj\Debug\net5.0\myapp.pdb
+C:\Users\natan\tea\myapp\obj\Debug\net5.0\myapp.genruntimeconfig.cache

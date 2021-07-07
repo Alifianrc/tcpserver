@@ -14,12 +14,12 @@ namespace Server
         {  
             TcpClient tcpClient = (TcpClient)obj;  
             StreamReader reader = new StreamReader(tcpClient.GetStream());  
- 
+
             while (true)  
             {
                 //server broadcast 
                 string message = Console.ReadLine();
-                BroadCast(message, tcpClient, 0);
+                BroadCast(message, tcpClient, null);
                 string chat = "Announce : " + message;
                 Console.WriteLine(chat);
 
@@ -28,39 +28,48 @@ namespace Server
             }
         }
  
-        public void ClientListener(object obj, int num)  
+        public void ClientListener(object obj)  
         {  
             TcpClient tcpClient = (TcpClient)obj;  
             StreamReader reader = new StreamReader(tcpClient.GetStream());  
- 
-            Console.WriteLine("Client connected");  
- 
+            string name = reader.ReadLine();
+            
+            Console.WriteLine(name + " connected");  
             while (true)  
             {
-                //record chat  
-                string message = reader.ReadLine();
-                BroadCast(message, tcpClient,num);
-                string chat = "Client " + num.ToString() + " : " + message;
-                Console.WriteLine(chat);
+                try
+                {
+                    //record chat  
+                    string message = reader.ReadLine();
+                    BroadCast(message, tcpClient, name);
+                    string chat = "Client " + name + " : " + message;
+                    Console.WriteLine(chat);
 
-                //save to txt
-                program.writeMessage(chat);
+                    //save to txt
+                    program.writeMessage(chat);
+                }
+                catch (Exception e)  
+                {  
+                    Console.WriteLine(e.Message);  
+                    program.removeClient(tcpClient);
+                    break;  
+                }  
             }
         }
  
-        public void BroadCast(string msg, TcpClient excludeClient, int n)  
+        public void BroadCast(string msg, TcpClient excludeClient, string n)  
         {  
             foreach (TcpClient client in Program.tcpClientsList)  
             {   
                 //broadcast to all client except sender
                 StreamWriter sWriter = new StreamWriter(client.GetStream());  
-                if(n == 0)
+                if(n == null)
                 {
                     sWriter.WriteLine("Server : "+ msg); 
                 }
                 else if (client != excludeClient)  
                 { 
-                    sWriter.WriteLine("Client "+n.ToString() +" : "+ msg);  
+                    sWriter.WriteLine("Client "+ n + " : "+ msg);  
                 }
                 sWriter.Flush();    
             }  
@@ -74,7 +83,6 @@ namespace Server
 
         static void Main(string[] args)  
         {
-            int numClients = -1;
             HandleClient handleClient = new HandleClient();
 
             //start process
@@ -84,7 +92,6 @@ namespace Server
             while (true)  
             {
                 //add clients to list
-                numClients++;  
                 TcpClient tcpClient = tcpListener.AcceptTcpClient();  
                 tcpClientsList.Add(tcpClient);
 
@@ -93,7 +100,7 @@ namespace Server
                 bc.Start();
 
                 //start listener
-                Thread startListen = new Thread(() => handleClient.ClientListener(tcpClient, numClients));
+                Thread startListen = new Thread(() => handleClient.ClientListener(tcpClient));
                 startListen.Start();
             }          
         }
@@ -102,6 +109,11 @@ namespace Server
         {
             messagesToSave.Add(chat);
             File.WriteAllLines("C:/Users/natan/tea/myapp/server/chats.txt", messagesToSave);
+        }
+
+        public void removeClient(TcpClient client)
+        {
+            tcpClientsList.Remove(client);
         }
     }  
 } 
