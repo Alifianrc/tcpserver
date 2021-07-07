@@ -8,7 +8,7 @@ Multiclient multithreaded tcp server
 5. Client receives message
 6. All chat log is recorded by Server
 # Flowchart
-![alt text](https://github.com/marvel-natanael/tcpserver/blob/main/tcpflow%20(2).png?raw=true)
+![alt text](https://github.com/marvel-natanael/tcpserver/blob/main/tcpflow%20(4).png?raw=true)
 ## Installation
 1. Clone the repo
 2. In [This File](/server/server.cs) change
