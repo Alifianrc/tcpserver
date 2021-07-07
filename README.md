@@ -1,7 +1,7 @@
 # tcpserver
 Multiclient multithreaded tcp server
 # Flowchart
-![alt text] (https://app.diagrams.net/#G1Qo9a7OVZ9iEoL8F6lxtSzft1E69xjB49)
+![alt text](https://github.com/marvel-natanael/tcpserver/blob/main/tcpflow%20(1).png?raw=true)
 ## Installation
 1. Clone the repo
 2. In [This File](/server.cs) change
