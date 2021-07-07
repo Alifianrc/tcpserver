@@ -11,7 +11,7 @@ Multiclient multithreaded tcp server
 ![alt text](https://github.com/marvel-natanael/tcpserver/blob/main/tcpflow%20(1).png?raw=true)
 ## Installation
 1. Clone the repo
-2. In [This File](/server.cs) change
+2. In [This File](/server/server.cs) change
 ```
 "C:/Users/natan/tea/myapp/server/chats.txt"
 ```
