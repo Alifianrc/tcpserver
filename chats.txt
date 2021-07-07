@@ -1,3 +1,0 @@
-Client 1 : a
-Client 1 : b
-Client 1 : c
