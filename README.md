@@ -1,5 +1,7 @@
 # tcpserver
 Multiclient multithreaded tcp server
+# Flowchart
+![alt text] (https://app.diagrams.net/#G1Qo9a7OVZ9iEoL8F6lxtSzft1E69xjB49)
 ## Installation
 1. Clone the repo
 2. In [This File](/server.cs) change
