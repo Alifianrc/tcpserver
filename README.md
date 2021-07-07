@@ -1,5 +1,12 @@
 # tcpserver
 Multiclient multithreaded tcp server
+# Work Flow
+1. Server Running
+2. Client Running
+3. Client / Server input message
+4. Server broadcasts the message
+5. Client receives message
+6. All chat log is recorded by Server
 # Flowchart
 ![alt text](https://github.com/marvel-natanael/tcpserver/blob/main/tcpflow%20(1).png?raw=true)
 ## Installation
